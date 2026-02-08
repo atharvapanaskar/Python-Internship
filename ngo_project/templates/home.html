@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ content.ngo_name if content else "NGO" }}</title>
+
+</head>
+<body>
+
+<h1>{{ content.ngo_name if content else "NGO Name" }}</h1>
+
+<h2>About Us</h2>
+<p>{{ content.about_text if content else "" }}</p>
+
+<h2>Mission</h2>
+<p>{{ content.mission if content else "" }}</p>
+
+<h2>Vision</h2>
+<p>{{ content.vision if content else "" }}</p>
+
+<a href="{{ content.donation_link if content else '#' }}">Donate Now</a>
+
+<h3>Contact</h3>
+<p>Email: {{ content.contact_email if content else "" }}</p>
+<p>Phone: {{ content.contact_phone if content else "" }}</p>
+
+<br>
+<a href="/admin">Admin Login</a>
+
+</body>
+</html>
