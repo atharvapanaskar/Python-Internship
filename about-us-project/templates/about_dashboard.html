@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us Dashboard</title>
+</head>
+<body>
+
+<h1>About Us Management Dashboard</h1>
+
+<hr>
+
+<h2>Current NGO Information</h2>
+
+{% if about %}
+    <p><strong>History:</strong><br> {{ about.history }}</p>
+    <p><strong>Objectives:</strong><br> {{ about.objectives }}</p>
+    <p><strong>Achievements:</strong><br> {{ about.achievements }}</p>
+    <p><strong>Core Values:</strong><br> {{ about.core_values }}</p>
+{% else %}
+    <p>No data available yet.</p>
+{% endif %}
+
+<hr>
+
+<h2>Update About Information</h2>
+
+<form method="post" action="/update-about">
+
+    <label>History:</label><br>
+    <textarea name="history" rows="4" cols="50">{{ about.history if about else '' }}</textarea><br><br>
+
+    <label>Objectives:</label><br>
+    <textarea name="objectives" rows="4" cols="50">{{ about.objectives if about else '' }}</textarea><br><br>
+
+    <label>Achievements:</label><br>
+    <textarea name="achievements" rows="4" cols="50">{{ about.achievements if about else '' }}</textarea><br><br>
+
+    <label>Core Values:</label><br>
+    <textarea name="core_values" rows="4" cols="50">{{ about.core_values if about else '' }}</textarea><br><br>
+
+    <button type="submit">Update Information</button>
+
+</form>
+
+</body>
+</html>

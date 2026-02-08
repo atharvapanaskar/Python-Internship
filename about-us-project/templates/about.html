@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+</head>
+<body>
+
+<h1>About Our NGO</h1>
+
+<h2>History</h2>
+<p>{{ about.history if about else "" }}</p>
+
+<h2>Objectives</h2>
+<p>{{ about.objectives if about else "" }}</p>
+
+<h2>Achievements</h2>
+<p>{{ about.achievements if about else "" }}</p>
+
+<h2>Core Values</h2>
+<p>{{ about.core_values if about else "" }}</p>
+
+<br>
+<a href="/about-dashboard">Manage About Us</a>
+
+</body>
+</html>
