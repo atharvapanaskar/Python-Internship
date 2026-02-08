@@ -1,0 +1,7 @@
+<h1>Media Gallery</h1>
+
+{% for media in media_list %}
+    <h3>{{ media.title }}</h3>
+    <p>{{ media.description }}</p>
+    <img src="{{ media.image_url }}" width="200"><br><br>
+{% endfor %}
